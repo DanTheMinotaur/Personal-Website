@@ -9,7 +9,8 @@ def home(request):
 
     context = {
         'all_links': all_links,
-        'page_title': "Home"
+        'page_title': "Home",
+
     }
 
     return render(request, 'homepage/home.html', context)

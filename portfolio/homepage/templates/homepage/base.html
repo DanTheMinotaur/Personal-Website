@@ -14,33 +14,17 @@
 </head>
 
 <body>
-    <header>{% block header %} {% endblock %}
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
-                <a href="#" data-activates="navigation" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-                <li><a href="#">Link 6</a></li>
-            </ul>
-                <ul class="side-nav" id="navigation">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-              </ul>
-            </div>
-        </nav>
-    </header>
+    {% include 'homepage/base_navbar.html' %}
+    {% include 'homepage/home_header.html' %}
 
     <main>
         {% block main_content %} {% endblock %}
     </main>
-    <footer>Footer is always the same...</footer>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 {% load static %}

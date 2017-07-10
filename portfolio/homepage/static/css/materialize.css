@@ -3111,7 +3111,7 @@ nav {
     height: 100%; }
   @media only screen and (min-width: 993px) {
     nav a.button-collapse {
-      display: none; } }
+      display: block; } }
   nav .button-collapse {
     float: left;
     position: relative;
@@ -6788,5 +6788,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-width: 4;
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
+
+header .header-text {
+  color: #FFFFFF;
+  margin-top: 20%; }
+  @media only screen and (min-width: 601px) {
+    header .header-text {
+      margin-top: 10%; } }
+
+nav .brand-logo {
+  text-transform: uppercase; }
+
+#portfolio-links .card .card-image img {
+  opacity: .7; }
 
 /*# sourceMappingURL=materialize.css.map */
