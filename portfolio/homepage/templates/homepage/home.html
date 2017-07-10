@@ -1,0 +1,18 @@
+{% extends 'homepage/base.html' %}
+{% block page_title %} {{ page_title }} {% endblock %}
+{% block main_content %}
+{% if all_links %}
+    <article id="portfolio-links">
+        {% for link in all_links %}
+        <section class="{{ link.optional_class }}">
+            <span class="image"><img width="200" height="200" src="media/{{ link.link_image }}" alt="{{ link.link_description }}"></span>
+            <h3>{{ link.link_name }}</h3>
+            <p>{{ link.link_description }}</p>
+            <a href="{{ link.link_url }}"></a>
+        </section>
+        {% endfor %}
+    </article>
+{% else %}
+    <article>Unable to load details.... :-( </article>
+{% endif %}
+{% endblock %}
