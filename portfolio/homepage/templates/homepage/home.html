@@ -2,13 +2,13 @@
 {% block page_title %} {{ page_title }} {% endblock %}
 {% block main_content %}
 {% if all_links %}
-    <article id="portfolio-links">
+    <article id="portfolio-links" class="container">
         {% for link in all_links %}
         {% if forloop.first %}<div class="row">{% endif %}
             <div class="col s12 m6 l6">
                 <section class="card {{ link.optional_class }}">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="media/{{ link.link_image }}" alt="{{ link.link_description }}">
+                    <div class="card-image  waves-effect waves-block waves-light">
+                        <img class="activator large" src="media/{{ link.link_image }}" alt="{{ link.link_description }}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{ link.link_name }}<i class="material-icons right">call_received</i></span>
@@ -16,7 +16,7 @@
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{ link.link_name }}<i class="material-icons right">close</i></span>
                       <p>{{ link.link_description }}</p>
-                        <p><a href="link.link_url">Link <i class="material-icons">input</i></span></a></p>
+                        <p><a href="{{link.link_url}}" target="_blank">Link <i class="material-icons">input</i></span></a></p>
                     </div>
                 </section>
             </div>
@@ -26,4 +26,5 @@
 {% else %}
     <article><p>Unable to load details.... :-( </p></article>
 {% endif %}
+{% include 'homepage/home_contact_form.html' %}
 {% endblock %}

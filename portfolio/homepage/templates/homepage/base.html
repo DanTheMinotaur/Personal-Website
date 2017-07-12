@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <title>{%block page_title %}{% endblock %} - danieldevine.net</title>
+  <title>{{ page_title|title }} - danieldevine.net</title>
   <meta name="author" content="Daniel Devine">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/materialize.css' %}" />
+    <script src="https://use.fontawesome.com/bfd5384799.js"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -17,7 +18,7 @@
     {% include 'homepage/base_navbar.html' %}
     {% include 'homepage/home_header.html' %}
 
-    <main>
+    <main id="{{ page_title|lower }}">
         {% block main_content %} {% endblock %}
     </main>
     <footer class="page-footer">

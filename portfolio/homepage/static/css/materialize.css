@@ -6799,7 +6799,21 @@ header .header-text {
 nav .brand-logo {
   text-transform: uppercase; }
 
+#home .container {
+  width: 85%; }
+#home address {
+  font-style: normal; }
+
 #portfolio-links .card .card-image img {
-  opacity: .7; }
+  opacity: 1; }
+  @media only screen and (min-width: 601px) {
+    #portfolio-links .card .card-image img {
+      opacity: .95; } }
+@media only screen and (min-width: 601px) {
+  #portfolio-links .card:hover .card-image img {
+    opacity: 1;
+    -webkit-transition: .3s;
+    /* Safari */
+    transition: .3s; } }
 
 /*# sourceMappingURL=materialize.css.map */
