@@ -1,0 +1,36 @@
+{% extends 'homepage/base.html' %}
+{% block page_title %} {{ page_title }} {% endblock %}
+{% block header %}
+<header>
+    <div class="parallax-container">
+        <div class="header-text center">
+            Blog Test Template
+        </div>
+        <div class="parallax">
+            {% load static %}
+            <img src="{% static 'images/par_1.jpg' %}">
+        </div>
+    </div>
+</header>
+{% endblock %}
+{% block main_content %}
+    {% if latest_blog_posts %}
+        {% for blog_data in latest_blog_posts %}
+        <div class="row">
+            <article class="col m10 offset-m1 s12">
+                <header>
+                    <h2>{{ blog_data.post_title }}</h2>
+                    <h3>{{ blog_data.sub_heading }}</h3>
+                </header>
+                <section>
+                    <p>{{ blog_data.main_content }}</p>
+                </section>
+                <footer></footer>
+            </article>
+        </div>
+        {% endfor %}
+
+    {% else %}
+        <p>Nothing to Display</p>
+    {% endif %}
+{% endblock %}
