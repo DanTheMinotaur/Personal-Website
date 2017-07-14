@@ -4,7 +4,7 @@
 <header>
     <div class="parallax-container">
         <div class="header-text center">
-            Blog Test Template
+            <h1>Blog Test Template</h1>
         </div>
         <div class="parallax">
             {% load static %}
@@ -25,7 +25,7 @@
                 <section>
                     <p>{{ blog_data.main_content }}</p>
                 </section>
-                <footer></footer>
+                <footer><a href="{{ blog_data.url_slug }}">Full Post</a></footer>
             </article>
         </div>
         {% endfor %}

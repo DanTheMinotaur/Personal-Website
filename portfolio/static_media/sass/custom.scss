@@ -1,0 +1,48 @@
+header {
+  .header-text {
+    color: #FFFFFF;
+    margin-top: 20%;
+
+    @media #{$medium-and-up} {
+      margin-top: 10%;
+    }
+  }
+}
+
+nav {
+  .brand-logo{
+    text-transform: uppercase;
+  }
+}
+
+#home {
+  .container {
+    width: 85%;
+  }
+
+  address {
+    font-style: normal;
+  }
+}
+
+#portfolio-links {
+  .card {
+    .card-image img {
+      opacity: 1;
+
+      @media #{$medium-and-up} {
+        opacity: .95;
+      }
+    }
+
+    &:hover {
+      .card-image img {
+        @media #{$medium-and-up} {
+          opacity: 1;
+          -webkit-transition: .3s; /* Safari */
+          transition: .3s;
+        }
+      }
+    }
+  }
+}

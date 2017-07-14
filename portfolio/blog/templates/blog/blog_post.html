@@ -3,15 +3,24 @@
 {% block header %}
 <header>
     <div class="parallax-container">
-        <div class="header-text center">
-            Blog Test Template
+        <div class="header-text left">
+            <h1>{{ blog_post.post_title }}</h1>
+            <h2>{{ blog_post.sub_heading }}</h2>
         </div>
         <div class="parallax">
-            {% load static %}
-            <img src="{% static 'images/par_1.jpg' %}">
+            <img src="{{ MEDIA_URL }}{{ blog_post.heading_image }}">
         </div>
     </div>
 </header>
 {% endblock %}
 {% block main_content %}
+    <article class="container">
+        <div class="col s12">
+            <div class="card blue-grey darken-2">
+                <div class="card-content white-text">
+                {{ blog_post.main_content }}
+                </div>
+            </div>
+        </div>
+    </article>
 {% endblock %}
