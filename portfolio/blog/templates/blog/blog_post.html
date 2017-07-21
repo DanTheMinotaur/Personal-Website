@@ -1,26 +1,56 @@
 {% extends 'homepage/base.html' %}
-{% block page_title %} {{ page_title }} {% endblock %}
+{% block page_title %} {{ blog_post.post_title }} {% endblock %}
+{% block meta_description %}{{ plog_post.meta_description }}{% endblock %}
+{% block meta_keywords %}{{ plog_post.meta_keywords }}{% endblock %}
+{% block page_id %}blog{% endblock %}
 {% block header %}
-<header>
+<header id="blog-heading">
     <div class="parallax-container">
-        <div class="header-text left">
-            <h1>{{ blog_post.post_title }}</h1>
-            <h2>{{ blog_post.sub_heading }}</h2>
+        <div class="header-text">
+            <div class="container">
+                <h1>{{ blog_post.post_title }}</h1>
+                <h2>{{ blog_post.sub_heading }}</h2>
+            </div>
         </div>
         <div class="parallax">
             <img src="{{ MEDIA_URL }}{{ blog_post.heading_image }}">
         </div>
     </div>
+    <nav>
+        <div class="nav-wrapper container">
+            <div class="col s12">
+                <a href="{% url 'blog:index' %}" class="breadcrumb">Home</a>
+                {% if blog_post.category != None %}
+                    <a href="{{ blog_post.category }}" class="breadcrumb">{{ blog_post.category }}</a>
+                {% endif %}
+                <a href="#" class="breadcrumb">{{ blog_post.post_title}}</a>
+            </div>
+        </div>
+    </nav>
 </header>
 {% endblock %}
 {% block main_content %}
-    <article class="container">
-        <div class="col s12">
-            <div class="card blue-grey darken-2">
-                <div class="card-content white-text">
-                {{ blog_post.main_content }}
-                </div>
+    <article class="container post">
+        <div class="card">
+            <div class="card-content blog-content">
+            {{ blog_post.main_content|safe }}
             </div>
         </div>
     </article>
+    <aside class="comments container">
+        <h3>Comments<button data-target="comment-modal" class="btn modal-trigger">Post Comment</button></h3>
+        <section>
+            {% for c in comments %}
+                <div class="comment card">
+                    <div class="card-content">
+                        <span class="card-title">{{ c.name }} - {{ c.date_created }}</span>
+                        <p><strong>{{ c.message }}</strong></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </aside>
+    <div class="modal" id="comment-modal">
+        {{ comment_form }}
+    </div>
 {% endblock %}

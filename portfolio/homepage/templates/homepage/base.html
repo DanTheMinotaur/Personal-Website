@@ -1,24 +1,25 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <title>{{ page_title|title }} - danieldevine.net</title>
-  <meta name="author" content="Daniel Devine">
+    <title>{% block page_title %}{% endblock %} - danieldevine.net</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="{% block mega_keywords %}{% endblock %}">
+    <meta name="author" content="Daniel Devine">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/materialize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
     <script src="https://use.fontawesome.com/bfd5384799.js"></script>
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
-<body>
+<body id="{% block page_id %}{% endblock %}">
     {% include 'homepage/base_navbar.html' %}
     {% block header %} {% endblock %}
 
-    <main id="{{ page_title|lower }}">
+    <main>
         {% block main_content %} {% endblock %}
     </main>
     <footer class="page-footer">
@@ -31,5 +32,4 @@
 {% load static %}
 <script src="{% static 'js/materialize.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </html>

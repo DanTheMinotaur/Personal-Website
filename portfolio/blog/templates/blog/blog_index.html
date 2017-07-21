@@ -1,35 +1,33 @@
 {% extends 'homepage/base.html' %}
 {% block page_title %} {{ page_title }} {% endblock %}
+{% block page_id %}blog{% endblock %}
 {% block header %}
-<header>
-    <div class="parallax-container">
-        <div class="header-text center">
-            <h1>Blog Test Template</h1>
-        </div>
-        <div class="parallax">
-            {% load static %}
-            <img src="{% static 'images/par_1.jpg' %}">
-        </div>
-    </div>
-</header>
+<div class="header-text center index-header">
+    <h1>Welcome to my Blog that is about stuff...</h1>
+</div>
 {% endblock %}
 {% block main_content %}
     {% if latest_blog_posts %}
+        <ul class="ani-loader">
         {% for blog_data in latest_blog_posts %}
+        <li>
         <div class="row">
-            <article class="col m10 offset-m1 s12">
-                <header>
-                    <h2>{{ blog_data.post_title }}</h2>
-                    <h3>{{ blog_data.sub_heading }}</h3>
-                </header>
-                <section>
-                    <p>{{ blog_data.main_content }}</p>
-                </section>
-                <footer><a href="{{ blog_data.url_slug }}">Full Post</a></footer>
+            <article class="col m10 offset-m1 s12 post-index-content">
+                <div class="content">
+                    <header>
+                        <h2><a href="{{ blog_data.url_slug }}">{{ blog_data.post_title }}</a></h2>
+                        <h3>{{ blog_data.sub_heading }}</h3>
+                    </header>
+                    <section>
+                        <p>{{ blog_data.main_content|safe|truncatewords_html:100 }}</p>
+                    </section>
+                </div>
+                <footer><a href="{{ blog_data.url_slug }}">Full Post <i class="fa fa-arrow-right" aria-hidden="true"></i><span>Posted: {{ blog_data.publish_date }}</span></a></footer>
             </article>
         </div>
+        </li>
         {% endfor %}
-
+        </ul>
     {% else %}
         <p>Nothing to Display</p>
     {% endif %}

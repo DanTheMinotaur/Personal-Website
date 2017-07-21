@@ -6816,4 +6816,52 @@ nav .brand-logo {
     /* Safari */
     transition: .3s; } }
 
+#blog {
+  color: rgba(0, 0, 0, 0.8); }
+  #blog .index-header {
+    color: #FFF;
+    background: #90caf9;
+    padding-bottom: 7.5%;
+    padding-top: 5%; }
+    #blog .index-header h1 {
+      font-weight: lighter; }
+  #blog .blog-content, #blog .post-index-content, #blog .comments .comment {
+    border-left: 2px solid #2979ff;
+    padding-left: 1%; }
+    #blog .blog-content a:hover, #blog .post-index-content a:hover, #blog .comments .comment a:hover {
+      color: #90caf9; }
+  #blog .post-index-content {
+    margin-top: 2%;
+    padding-left: 0; }
+    #blog .post-index-content .content {
+      padding-left: 1%; }
+    #blog .post-index-content footer {
+      border-bottom: 2px solid #2979ff;
+      border-right: 1px solid #2979ff; }
+      #blog .post-index-content footer a {
+        display: block;
+        padding: .7%; }
+      #blog .post-index-content footer span {
+        float: right; }
+      #blog .post-index-content footer:hover {
+        background: #2979ff; }
+  #blog .post .card {
+    margin: 0.1rem 0 1rem 0; }
+  #blog .breadcrumb:before {
+    content: '>'; }
+  #blog nav, #blog footer {
+    background: #82b1ff; }
+
+#blog-heading .header-text {
+  background: rgba(41, 121, 255, 0.75);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  #blog-heading .header-text h1 {
+    font-weight: lighter; }
+  @media only screen and (max-width: 600px) {
+    #blog-heading .header-text {
+      text-align: center; } }
+
 /*# sourceMappingURL=materialize.css.map */

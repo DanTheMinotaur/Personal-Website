@@ -1,10 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
 from django.views import generic
-
-
-# Create your views here.
 from .models import Category, Post, Comment
+from .forms import CommentForm
+from django.views.generic.edit import FormView
 
 
 class IndexView(generic.ListView):
@@ -19,13 +16,18 @@ class BlogPostView(generic.DetailView):
     template_name = 'blog/blog_post.html'
     model = Post
     context_object_name = 'blog_post'
+    slug_url_kwarg = 'url_slug'
+    slug_field = 'url_slug'
 
-    def get_object(self, queryset=None):
-        return get_object_or_404(Post)
+    def get_context_data(self, **kwargs):
+        context = super(BlogPostView, self).get_context_data(**kwargs)
+        context['comments'] = Comment.objects.filter(post_id=context['blog_post'].id)
+        context['comment_form'] = PostCommentView
+        return context
 
 
-def blog_detail(request, slug):
-    blog = get_object_or_404(Post, url_slug=slug)
-    return render(request, 'blog/blog_post.html', {'blog': blog})
+class PostCommentView(FormView):
+    template_name = 'blog/comment_form.html'
+    form_class = CommentForm
 
 
