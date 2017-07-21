@@ -1,7 +1,7 @@
 from django.views import generic
+from django.views.generic.edit import FormView
 from .models import Category, Post, Comment
 from .forms import CommentForm
-from django.views.generic.edit import FormView
 
 
 class IndexView(generic.ListView):
@@ -22,12 +22,14 @@ class BlogPostView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super(BlogPostView, self).get_context_data(**kwargs)
         context['comments'] = Comment.objects.filter(post_id=context['blog_post'].id)
-        context['comment_form'] = PostCommentView
+        context['form'] = CommentView
         return context
 
 
-class PostCommentView(FormView):
+class CommentView(FormView):
     template_name = 'blog/comment_form.html'
     form_class = CommentForm
+    success_url = '/'
+
 
 
