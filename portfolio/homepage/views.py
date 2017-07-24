@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-#from django.views import View
 from .models import HomepageLink
 from .forms import ContactForm
 from django.core.mail import send_mail

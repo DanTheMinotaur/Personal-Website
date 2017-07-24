@@ -5,6 +5,7 @@ from datetime import date
 class Category(models.Model):
     category_name = models.CharField(max_length=50, unique=True)
     category_description = models.CharField(max_length=220, blank=True)
+    slug = models.SlugField(blank=False, max_length=100)
 
     def __str__(self):
         return self.category_name
