@@ -1,15 +1,12 @@
 $(document).ready(function() {
     // Materialize Navigator
-    //$(".button-collapse").sideNav('show')
+
+    $(".button-collapse").sideNav('show');
     $(".button-collapse").sideNav({
-        menuWidth: 260,
-        //edge: 'right'
+        menuWidth: 250,
     });
     // Homepage Parallax
     $('.parallax').parallax();
     $('.collapsible').collapsible();
-    $('.modal').modal();
-
-    //Materialize.showStaggeredList('.ani-loader');
 });
 

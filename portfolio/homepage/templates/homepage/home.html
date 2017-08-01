@@ -1,5 +1,6 @@
 {% extends 'homepage/base.html' %}
 {% block page_title %} {{ page_title }} {% endblock %}
+{% block page_id %}home{% endblock %}
 {% block header %}
 <header>
     <div class="parallax-container">
@@ -16,21 +17,18 @@
 {% endblock %}
 {% block main_content %}
 {% if all_links %}
-<article id="portfolio-links" class="">
+<article id="portfolio-links">
     {% for link in all_links %}
     {% if forloop.first %}<div class="row">{% endif %}
         <div class="col s12 m6 l6">
-            <section class="card {{ link.optional_class }}">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator large" src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{{ link.link_name }}<i class="material-icons right">call_received</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{ link.link_name }}<i class="material-icons right">close</i></span>
-                  <p>{{ link.link_description }}</p>
-                    <p><a href="{{link.link_url}}" target="_blank">Link <i class="material-icons">input</i></a></p>
+            <section class="show-box {{ link.optional_class }}">
+                <div class="waves-effect waves-block waves-light">
+                    <div class="link-text">
+                        <h3>{{ link.link_name }}</h3>
+                        <h4>{{ link.link_description }}</h4>
+                    </div>
+                    <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
+
                 </div>
             </section>
         </div>

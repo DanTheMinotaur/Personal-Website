@@ -23,9 +23,41 @@ nav {
   address {
     font-style: normal;
   }
+
+  // Allows the sidebar to be shown
+  main, header {
+    padding-left: 250px;
+
+    @media only screen and (max-width : 992px) {
+      padding-left: 0;
+    }
+  }
+
+
 }
 
 #portfolio-links {
+  .row .col {
+    padding: 0;
+  }
+
+  .link-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 25%;
+
+    h4 {
+      border-top: 3px solid #FFF;
+    }
+  }
+
+  .show-box img {
+    height: 400px;
+    width: 100%;
+    //SDASD
+  }
+
   .card {
     .card-image img {
       opacity: 1;
@@ -136,4 +168,3 @@ $blog-border: rgb(41,121,255);
     }
   }
 }
-

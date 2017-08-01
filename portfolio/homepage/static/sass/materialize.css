@@ -6803,7 +6803,24 @@ nav .brand-logo {
   width: 85%; }
 #home address {
   font-style: normal; }
+#home main, #home header {
+  padding-left: 250px; }
+  @media only screen and (max-width: 992px) {
+    #home main, #home header {
+      padding-left: 0; } }
 
+#portfolio-links .row .col {
+  padding: 0; }
+#portfolio-links .link-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 25%; }
+  #portfolio-links .link-text h4 {
+    border-top: 3px solid #FFF; }
+#portfolio-links .show-box img {
+  height: 400px;
+  width: 100%; }
 #portfolio-links .card .card-image img {
   opacity: 1; }
   @media only screen and (min-width: 601px) {
@@ -6863,5 +6880,7 @@ nav .brand-logo {
   @media only screen and (max-width: 600px) {
     #blog-heading .header-text {
       text-align: center; } }
+
+/* THis is a test comment another word*/
 
 /*# sourceMappingURL=materialize.css.map */
