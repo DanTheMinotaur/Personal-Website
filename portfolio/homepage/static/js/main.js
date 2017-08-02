@@ -8,5 +8,8 @@ $(document).ready(function() {
     // Homepage Parallax
     $('.parallax').parallax();
     $('.collapsible').collapsible();
-});
 
+    $('.scrolly-link').scrollSpy({
+        scrollOffset: 0,
+    });
+});

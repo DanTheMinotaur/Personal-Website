@@ -3,3 +3,8 @@
 //     -moz-box-shadow: $args1, $args2;
 //     box-shadow: $args1, $args2;
 // }
+
+@mixin transition($arg) {
+  -webkit-transition: $arg;
+  transition: $arg;
+}

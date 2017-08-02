@@ -3,7 +3,16 @@
         <a href="{% url 'home' %}" class="brand-logo right">DanielDevine.net</a>
         <a href="#" data-activates="navigation" class="button-collapse"><i class="fa fa-bars"></i></a>
         <ul class="side-nav fixed" id="navigation">
-            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}"{% if page_title == 'Home' %} class="active"{% endif %}>Home</a>
+                {% if page_title == 'Home' %}
+                    <ul>
+                        <li><a href="#about"><i class="fa fa-chevron-right" aria-hidden="true"></i>About</a></li>
+                        <li><a href="#technologies"><i class="fa fa-chevron-right" aria-hidden="true"></i>Technologies</a></li>
+                        <li><a href="#portfolio-links"><i class="fa fa-chevron-right" aria-hidden="true"></i>Projects</a></li>
+                        <li><a href="#contact"><i class="fa fa-chevron-right" aria-hidden="true"></i>Contact</a></li>
+                    </ul>
+                {% endif %}
+            </li>
             <li><a href="{% url 'blog:index' %}">Blog</a></li>
         </ul>
     </div>

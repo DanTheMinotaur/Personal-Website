@@ -5308,9 +5308,7 @@ input[type=range]:focus::-ms-fill-upper {
       float: left;
       height: 48px;
       line-height: 48px;
-      margin: 0 32px 0 0;
-      width: 24px;
-      color: rgba(0, 0, 0, 0.54); }
+      width: 24px; }
   .side-nav .divider {
     margin: 8px 0 0 0; }
   .side-nav .subheader {
@@ -6799,25 +6797,60 @@ header .header-text {
 nav .brand-logo {
   text-transform: uppercase; }
 
-#home .container {
-  width: 85%; }
-#home address {
-  font-style: normal; }
-#home main, #home header {
-  padding-left: 250px; }
-  @media only screen and (max-width: 992px) {
-    #home main, #home header {
-      padding-left: 0; } }
+#home {
+  background: #ce93d8; }
+  #home nav .active {
+    color: #ab47bc; }
+  #home .container {
+    width: 85%; }
+  #home address {
+    font-style: normal; }
+  #home main, #home #home-header {
+    padding-left: 250px; }
+    @media only screen and (max-width: 992px) {
+      #home main, #home #home-header {
+        padding-left: 0; } }
+  #home main .scrolly-link {
+    background: #ce93d8; }
+    #home main .scrolly-link header {
+      background: #9c27b0; }
+      #home main .scrolly-link header h2 {
+        margin: 0;
+        color: #ce93d8;
+        font-weight: 200;
+        padding: 3rem 0 2.5rem 6rem; }
+    #home main .scrolly-link .content {
+      padding: 2rem 6rem; }
+      #home main .scrolly-link .content p {
+        font-weight: 300;
+        font-size: 16px;
+        color: #FFF; }
 
 #portfolio-links .row .col {
   padding: 0; }
-#portfolio-links .link-text {
+#portfolio-links .show-box .link-text {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 25%; }
-  #portfolio-links .link-text h4 {
-    border-top: 3px solid #FFF; }
+  top: 25%;
+  color: rgba(255, 255, 255, 0); }
+  #portfolio-links .show-box .link-text h3 {
+    font-weight: 300; }
+  #portfolio-links .show-box .link-text h4 {
+    font-size: 1.7rem; }
+#portfolio-links .show-box .image-overlay {
+  border-top: 3px solid #FFF;
+  background: rgba(63, 63, 63, 0.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  #portfolio-links .show-box .image-overlay:hover {
+    background: rgba(63, 63, 63, 0.9);
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s; }
+    #portfolio-links .show-box .image-overlay:hover .link-text {
+      color: white;
+      -webkit-transition: color 1s;
+      transition: color 1s; }
 #portfolio-links .show-box img {
   height: 400px;
   width: 100%; }
@@ -6891,25 +6924,60 @@ header .header-text {
 nav .brand-logo {
   text-transform: uppercase; }
 
-#home .container {
-  width: 85%; }
-#home address {
-  font-style: normal; }
-#home main, #home header {
-  padding-left: 250px; }
-  @media only screen and (max-width: 992px) {
-    #home main, #home header {
-      padding-left: 0; } }
+#home {
+  background: #ce93d8; }
+  #home nav .active {
+    color: #ab47bc; }
+  #home .container {
+    width: 85%; }
+  #home address {
+    font-style: normal; }
+  #home main, #home #home-header {
+    padding-left: 250px; }
+    @media only screen and (max-width: 992px) {
+      #home main, #home #home-header {
+        padding-left: 0; } }
+  #home main .scrolly-link {
+    background: #ce93d8; }
+    #home main .scrolly-link header {
+      background: #9c27b0; }
+      #home main .scrolly-link header h2 {
+        margin: 0;
+        color: #ce93d8;
+        font-weight: 200;
+        padding: 3rem 0 2.5rem 6rem; }
+    #home main .scrolly-link .content {
+      padding: 2rem 6rem; }
+      #home main .scrolly-link .content p {
+        font-weight: 300;
+        font-size: 16px;
+        color: #FFF; }
 
 #portfolio-links .row .col {
   padding: 0; }
-#portfolio-links .link-text {
+#portfolio-links .show-box .link-text {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 25%; }
-  #portfolio-links .link-text h4 {
-    border-top: 3px solid #FFF; }
+  top: 25%;
+  color: rgba(255, 255, 255, 0); }
+  #portfolio-links .show-box .link-text h3 {
+    font-weight: 300; }
+  #portfolio-links .show-box .link-text h4 {
+    font-size: 1.7rem; }
+#portfolio-links .show-box .image-overlay {
+  border-top: 3px solid #FFF;
+  background: rgba(63, 63, 63, 0.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  #portfolio-links .show-box .image-overlay:hover {
+    background: rgba(63, 63, 63, 0.9);
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s; }
+    #portfolio-links .show-box .image-overlay:hover .link-text {
+      color: white;
+      -webkit-transition: color 1s;
+      transition: color 1s; }
 #portfolio-links .show-box img {
   height: 400px;
   width: 100%; }
