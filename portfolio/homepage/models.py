@@ -8,8 +8,11 @@ class HomepageLink(models.Model):
     link_image = models.ImageField(upload_to='site_images/homepage/')  # Check where this will save files to
     optional_class = models.CharField(max_length=40, blank=True)
 
+    placement = models.SmallIntegerField(default=1)
+
     def __str__(self):
         return self.link_name
+
 
 class HomepageSkillGroup(models.Model):
     skill_name = models.CharField(max_length=50)
@@ -18,7 +21,11 @@ class HomepageSkillGroup(models.Model):
     optional_icon = models.CharField(max_length=30, blank=True)
     optional_class = models.CharField(max_length=30, blank=True)
 
-class HomepageSkills(models.Model):
+    def __str__(self):
+        return self.skill_name
+
+
+class HomepageSkill(models.Model):
     # Icons in Technology Icons
     POSSIBLE_ICONS = (
         ('default', 'Customer Icon'),
@@ -140,10 +147,15 @@ class HomepageSkills(models.Model):
     )
 
     skill_title = models.CharField(max_length=50, blank=False)
-    icon = models.CharField(max_length=20, choices=POSSIBLE_ICONS, blank=False, default='default')
+    icon = models.CharField(max_length=20, choices=sorted(POSSIBLE_ICONS), blank=False, default='default')
     custom_icon = models.CharField(max_length=30, blank=True)
     skill_description = models.CharField(max_length=200, blank=True)
     optional_class = models.CharField(max_length=30, blank=True)
 
+    placement = models.SmallIntegerField(default=1)
+
     skill_group = models.ForeignKey(HomepageSkillGroup, on_delete=models.PROTECT, blank=True)
+
+    def __str__(self):
+        return self.skill_title
 

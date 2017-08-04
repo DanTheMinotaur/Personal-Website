@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from .models import HomepageLink, HomepageSkills
+from .models import HomepageLink, HomepageSkill, HomepageSkillGroup
 from .forms import ContactForm
 from django.core.mail import send_mail
 
 
 def home(request):
     all_links = HomepageLink.objects.all()
-    icons = HomepageSkills.objects.all()
+    icons = HomepageSkill.objects.all()
+    groups = HomepageSkillGroup.objects.all()
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -26,6 +27,7 @@ def home(request):
         'all_links': all_links,
         'contact_form': form,
         'icons': icons,
+        'groups': groups,
     }
 
     return render(request, 'homepage/home.html', context)

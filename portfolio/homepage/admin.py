@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomepageLink, HomepageSkills, HomepageSkillGroup
+from .models import HomepageLink, HomepageSkill, HomepageSkillGroup
 
 # Register your models here.
-admin.site.register([HomepageLink, HomepageSkills, HomepageSkillGroup])
+admin.site.register([HomepageLink, HomepageSkill, HomepageSkillGroup])

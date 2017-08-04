@@ -88,7 +88,11 @@ DATABASES = {
         # 'HOST': 'localhost',
         # 'PORT': '3306',
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'portfolio',
+        'NAME': 'portfolio.sqlite3',
+    },
+    'blog': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'blog.sqlite3',
     }
 }
 
