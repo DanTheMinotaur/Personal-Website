@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class HomepageLink(models.Model):
+class Project(models.Model):
     link_name = models.CharField(max_length=50)
     link_description = models.CharField(max_length=255, blank=True)
     link_url = models.URLField()
@@ -14,7 +14,7 @@ class HomepageLink(models.Model):
         return self.link_name
 
 
-class HomepageSkillGroup(models.Model):
+class SkillGroup(models.Model):
     skill_name = models.CharField(max_length=50)
     skill_description = models.CharField(max_length=250, blank=True)
 
@@ -25,7 +25,7 @@ class HomepageSkillGroup(models.Model):
         return self.skill_name
 
 
-class HomepageSkill(models.Model):
+class Skill(models.Model):
     # Icons in Technology Icons
     POSSIBLE_ICONS = (
         ('default', 'Customer Icon'),
@@ -154,7 +154,7 @@ class HomepageSkill(models.Model):
 
     placement = models.SmallIntegerField(default=1)
 
-    skill_group = models.ForeignKey(HomepageSkillGroup, on_delete=models.PROTECT, blank=True)
+    skill_group = models.ForeignKey(SkillGroup, on_delete=models.PROTECT, blank=True)
 
     def __str__(self):
         return self.skill_title

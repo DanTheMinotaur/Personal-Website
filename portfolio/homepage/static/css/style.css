@@ -6826,6 +6826,25 @@ nav .brand-logo {
         font-size: 16px;
         color: #FFF; }
 
+#technologies section {
+  background: #9c27b0;
+  padding: 1.5%;
+  transition: box-shadow .25s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px; }
+  #technologies section h3, #technologies section p {
+    text-align: center;
+    color: white;
+    font-weight: 300; }
+#technologies .card-panel {
+  background: #ce93d8;
+  color: #FFF; }
+  #technologies .card-panel .card-title {
+    margin-left: 7.5%;
+    font-size: 2rem; }
+  #technologies .card-panel i {
+    font-size: 300%; }
+
 #portfolio-links .row .col {
   padding: 0; }
 #portfolio-links .show-box .link-text {
@@ -6952,6 +6971,25 @@ nav .brand-logo {
         font-weight: 300;
         font-size: 16px;
         color: #FFF; }
+
+#technologies section {
+  background: #9c27b0;
+  padding: 1.5%;
+  transition: box-shadow .25s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px; }
+  #technologies section h3, #technologies section p {
+    text-align: center;
+    color: white;
+    font-weight: 300; }
+#technologies .card-panel {
+  background: #ce93d8;
+  color: #FFF; }
+  #technologies .card-panel .card-title {
+    margin-left: 7.5%;
+    font-size: 2rem; }
+  #technologies .card-panel i {
+    font-size: 300%; }
 
 #portfolio-links .row .col {
   padding: 0; }
