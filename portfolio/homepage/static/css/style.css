@@ -6810,6 +6810,11 @@ nav .brand-logo {
     @media only screen and (max-width: 992px) {
       #home main, #home #home-header {
         padding-left: 0; } }
+  #home #home-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%; }
   #home main .scrolly-link {
     background: #ce93d8; }
     #home main .scrolly-link header {
@@ -6956,6 +6961,11 @@ nav .brand-logo {
     @media only screen and (max-width: 992px) {
       #home main, #home #home-header {
         padding-left: 0; } }
+  #home #home-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%; }
   #home main .scrolly-link {
     background: #ce93d8; }
     #home main .scrolly-link header {
