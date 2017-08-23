@@ -1,0 +1,40 @@
+<section id="technologies" class="scrolly-link">
+    <header>
+        <h2>Technologies</h2>
+    </header>
+    <div class="content">
+        <p class="menu">To see what I can do click here ue"></p>
+        {% for group in groups %}
+            <section{% if group.optional_class != '' %} class="{{ group.optional_class }}"{% endif %}>
+            <h3>{{ group.skill_name }}<button class="waves-effect waves-light btn show-btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></h3>
+            {% if group.skill_description != '' %}<p>{{ group.skill_description }}</p>{% endif %}
+            <div class="section-container">
+                {% for skill in group.skill_set.all %}
+                    {% if forloop.first %}<div class="row">{% endif %}
+                        <div class="col s12 m12 l4 skill-panel">
+                            <div class="card">
+                                <div class="card-panel">
+                                    <div>
+                                        {% if skill.icon != 'default' %}
+                                            <i class="icon-{{ skill.icon }}" aria-hidden="true"></i>
+                                        {% else %}
+                                            <i class="{{ skill.custom_icon }}" aria-hidden="true"></i>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-title">{{ skill.skill_title }}</div>
+                                    <p class="description">{{ skill.skill_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                {% if forloop.last %}
+                    </div>
+                {% elif forloop.counter|divisibleby:"3" %}
+                    </div><div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+            </section>
+        {% endfor %}
+    </div>
+</section>
+

@@ -5,11 +5,21 @@ $(document).ready(function() {
     $(".button-collapse").sideNav({
         menuWidth: 250,
     });
-    // Homepage Parallax
-    $('.parallax').parallax();
+
     $('.collapsible').collapsible();
 
     $('.scrolly-link').scrollSpy({
         scrollOffset: 0,
     });
+
+    //dropdownShow('.show-btn', '.section-container');
+     $(document).ready(function(){
+        $('.collapsible').collapsible();
+     });
 });
+
+var dropdownShow = function(selectObject, targetObject) {
+    $(selectObject).click(function () {
+        $(targetObject).css('display', 'block');
+    })
+};

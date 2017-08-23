@@ -6,16 +6,14 @@
 {% endblock %}
 {% block page_id %}home{% endblock %}
 {% block header %}
-<header id="home-header">
-    <div class="parallax-container">
-        <div class="header-text center">
+<header>
+    <div id="home-header">
+        <div class="top-shape"></div>
+        <div class="header-text">
             <h1>Hi, this is my Portfolio Page</h1>
             <h2>Welcome to my site</h2>
         </div>
-        <div class="parallax">
-            {% load static %}
-            <img src="{% static 'images/par_1.jpg' %}">
-        </div>
+        <div class="bottom-shape"></div>
     </div>
 </header>
 {% endblock %}
@@ -29,79 +27,11 @@
             <p>I'm a 24 years young part time student studying computer science in college and full time call center drone. Really enjoy designing and making website and really started enjoying programming recently. Currently Coding in Java for college, JavaScript and PHP for websites and recently started looking into Python but that's still in early stages. You can see stuff I've made for college on my GitHub Account.</p>
         </div>
     </section>
-    <section id="technologies" class="scrolly-link">
-        <header>
-            <h2>Technologies</h2>
-        </header>
-        <div class="content">
-            {% include 'homepage/skill_groups.html' %}
-        </div>
-    </section>
+    {% include 'homepage/technologies_acc.html' %}
 
+    {% include 'homepage/projects.html' %}
 
-<section id="portfolio-links" class="scrolly-link">
-    <header>
-        <h2>Projects</h2>
-    </header>
-{% if all_links %}
-    <div class="content">
-        <p>Here are just a few things that I've made</p>
-    </div>
-    {% for link in all_links %}
-    {% if forloop.first %}<div class="row">{% endif %}
-        <div class="col s12 m6 l6">
-            <section class="show-box {{ link.optional_class }}">
-                <div class="waves-effect waves-block waves-light">
-                    <div class="image-overlay">
-                    <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
-                        <div class="link-text">
-                            <h3>{{ link.link_name }}</h3>
-                            <h4>{{ link.link_description }}</h4>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    {% if forloop.counter|divisibleby:2 %}</div><div class="row">{% endif %}
-    {% endfor %}
-{% else %}
-    <article><p>Unable to load details.... :-( </p></article>
-{% endif %}
-</section>
-
-    <section id="contact" class="scrolly-link" >
-        <header>
-            <h2>Contact</h2>
-        </header>
-        <div class="content">
-            <div class="row">
-                <form method="post" class="col s12 m8">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <h3 class="card-title">Send me a Message</h3>
-                            {% csrf_token %}
-                            {% for field in contact_form %}
-                                <div class="input-field">
-                                    {{ field.errors }}
-                                    {{ field.label_tag }}
-                                    {{ field }}
-                                </div>
-                            {% endfor %}
-                            <input type="submit" value="Submit" class="waves-effect waves-light btn">
-                        </div>
-                    </div>
-                </form>
-                <div class="col s12 m4">
-                    <div class="card blue-grey darken-1">
-                        <address class="card-content white-text">
-                            <h3 class="card-title">Information</h3>
-                            <span>Dublin<br/> Ireland, Earth<br/> Sol, Local Group<br/> Dimension C-137</span>
-                        </address>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'homepage/contact_form.html' %}
 {% endblock %}
 {% block optional_js %}
     {% load static %}
