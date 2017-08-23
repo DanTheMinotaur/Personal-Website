@@ -10,15 +10,14 @@
     {% if forloop.first %}<div class="row">{% endif %}
         <div class="col s12 m6 l6">
             <section class="show-box {{ link.optional_class }}">
-                <div class="waves-effect waves-block waves-light">
                     <div class="image-overlay">
-                    <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
+                        <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
                         <div class="link-text">
                             <h3>{{ link.link_name }}</h3>
                             <h4>{{ link.link_description }}</h4>
                         </div>
                     </div>
-                </div>
+
             </section>
         </div>
     {% if forloop.counter|divisibleby:2 %}</div><div class="row">{% endif %}

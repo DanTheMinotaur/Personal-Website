@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ae34d0-0cc4-4a0a-abb8-55863ae71aee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/contact_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/technologies_acc.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/skill_groups.html" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/technologies.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/portfolio.sqlite3" afterPath="$PROJECT_DIR$/portfolio/portfolio.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/css/style.css" afterPath="$PROJECT_DIR$/portfolio/homepage/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/css/style.css.map" afterPath="$PROJECT_DIR$/portfolio/homepage/static/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/js/main.js" afterPath="$PROJECT_DIR$/portfolio/homepage/static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/sass/components/_mixins.scss" afterPath="$PROJECT_DIR$/portfolio/homepage/static/sass/components/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/sass/custom.scss" afterPath="$PROJECT_DIR$/portfolio/homepage/static/sass/custom.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.css" afterPath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.css.map" afterPath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.scss" afterPath="$PROJECT_DIR$/portfolio/homepage/static/sass/materialize.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/base_navbar.html" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/base_navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/home.html" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html" afterPath="$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,31 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="technologies_acc.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/technologies_acc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="406">
               <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/homepage/static/sass/custom.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="185" column="23" lean-forward="false" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+            <state relative-caret-position="7640">
+              <caret line="403" column="1" lean-forward="true" selection-start-line="403" selection-start-column="1" selection-end-line="403" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -173,6 +159,7 @@
         <option value="$PROJECT_DIR$/portfolio/homepage/static/js/main.js" />
         <option value="$PROJECT_DIR$/portfolio/homepage/static/sass/custom.scss" />
         <option value="$PROJECT_DIR$/portfolio/homepage/templates/homepage/technologies_acc.html" />
+        <option value="$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html" />
       </list>
     </option>
   </component>
@@ -517,7 +504,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -828,26 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/technologies.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="8" column="82" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -870,8 +841,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/homepage/static/sass/custom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="185" column="23" lean-forward="false" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+        <state relative-caret-position="7640">
+          <caret line="403" column="1" lean-forward="true" selection-start-line="403" selection-start-column="1" selection-end-line="403" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/homepage/templates/homepage/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
