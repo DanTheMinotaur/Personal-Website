@@ -1,3 +1,7 @@
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -6787,6 +6791,31 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-110%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -250%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 header .header-text {
   color: #FFFFFF;
   margin-top: 20%; }
@@ -6799,8 +6828,11 @@ nav .brand-logo {
 
 #home {
   background: #ce93d8; }
-  #home nav .active {
-    color: #ab47bc; }
+  #home nav {
+    background: #9c27b0; }
+    #home nav .active {
+      color: #ab47bc;
+      background: rgba(143, 130, 134, 0.11); }
   #home .container {
     width: 85%; }
   #home address {
@@ -6811,41 +6843,98 @@ nav .brand-logo {
       #home main, #home #home-header {
         padding-left: 0; } }
   #home #home-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-  #home main .scrolly-link {
+    background: #333; }
+    #home #home-header .header-text {
+      position: absolute;
+      width: 100%;
+      background: #9c27b0;
+      /* The Fallback */
+      background: rgba(156, 39, 176, 0.6);
+      padding: 2.5%;
+      color: #FFF;
+      transform: translate3d(0, -250%, 0);
+      animation: fadeInDown .5s linear 1s;
+      animation-fill-mode: forwards; }
+      #home #home-header .header-text h1 {
+        font-weight: 300;
+        border-bottom: 2px solid #FFF;
+        padding-bottom: 1%;
+        transform: translate3d(-110%, 0, 0);
+        animation: fadeInLeft 1s linear 2s;
+        animation-fill-mode: forwards; }
+      #home #home-header .header-text h2 {
+        font-weight: 400;
+        opacity: 1;
+        transition: 3s all ease;
+        transform: translate3d(2000px, 0, 0);
+        animation: fadeInRightBig 1.4s linear 1.5s;
+        animation-fill-mode: forwards; }
+  #home main {
     background: #ce93d8; }
-    #home main .scrolly-link header {
+    #home main header {
       background: #9c27b0; }
-      #home main .scrolly-link header h2 {
+      #home main header h2 {
         margin: 0;
         color: #ce93d8;
         font-weight: 200;
         padding: 3rem 0 2.5rem 6rem; }
-    #home main .scrolly-link .content {
+    #home main .content {
       padding: 2rem 6rem; }
-      #home main .scrolly-link .content p {
+      #home main .content p {
         font-weight: 300;
         font-size: 16px;
         color: #FFF; }
 
+#about .content p {
+  font-size: 135%; }
+#about .content :first-child {
+  font-size: 160%; }
+
+#technologies .menu {
+  font-size: 3rem;
+  display: block;
+  background: #9c27b0;
+  padding: 2%; }
+#technologies .collapsible {
+  border: none; }
+#technologies .collapsible-header {
+  background-color: #9c27b0;
+  border-color: #ce93d8; }
+  #technologies .collapsible-header h3 {
+    margin-top: 0;
+    font-weight: 200;
+    color: #ce93d8;
+    padding: 3% 0 0 0; }
+#technologies .collapsible-body {
+  background-color: #9c27b0; }
 #technologies section {
   background: #9c27b0;
   padding: 1.5%;
   transition: box-shadow .25s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   border-radius: 2px; }
-  #technologies section h3, #technologies section p {
-    text-align: center;
-    color: white;
-    font-weight: 300; }
+#technologies .skill-panel {
+  cursor: default; }
+  #technologies .skill-panel .description {
+    opacity: 0;
+    transition: .6s ease;
+    text-align: center; }
+  #technologies .skill-panel:hover .description {
+    opacity: 1;
+    transition: 1s ease; }
 #technologies .card-panel {
   background: #ce93d8;
   color: #FFF; }
+  #technologies .card-panel div {
+    width: 100%; }
+    #technologies .card-panel div i {
+      display: block;
+      text-align: center;
+      font-size: 5rem; }
   #technologies .card-panel .card-title {
-    margin-left: 7.5%;
+    text-align: center;
+    font-weight: 200;
+    width: 100%;
     font-size: 2rem; }
   #technologies .card-panel i {
     font-size: 300%; }
@@ -6938,6 +7027,31 @@ nav .brand-logo {
     #blog-heading .header-text {
       text-align: center; } }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-110%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -250%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 header .header-text {
   color: #FFFFFF;
   margin-top: 20%; }
@@ -6950,8 +7064,11 @@ nav .brand-logo {
 
 #home {
   background: #ce93d8; }
-  #home nav .active {
-    color: #ab47bc; }
+  #home nav {
+    background: #9c27b0; }
+    #home nav .active {
+      color: #ab47bc;
+      background: rgba(143, 130, 134, 0.11); }
   #home .container {
     width: 85%; }
   #home address {
@@ -6962,41 +7079,98 @@ nav .brand-logo {
       #home main, #home #home-header {
         padding-left: 0; } }
   #home #home-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-  #home main .scrolly-link {
+    background: #333; }
+    #home #home-header .header-text {
+      position: absolute;
+      width: 100%;
+      background: #9c27b0;
+      /* The Fallback */
+      background: rgba(156, 39, 176, 0.6);
+      padding: 2.5%;
+      color: #FFF;
+      transform: translate3d(0, -250%, 0);
+      animation: fadeInDown .5s linear 1s;
+      animation-fill-mode: forwards; }
+      #home #home-header .header-text h1 {
+        font-weight: 300;
+        border-bottom: 2px solid #FFF;
+        padding-bottom: 1%;
+        transform: translate3d(-110%, 0, 0);
+        animation: fadeInLeft 1s linear 2s;
+        animation-fill-mode: forwards; }
+      #home #home-header .header-text h2 {
+        font-weight: 400;
+        opacity: 1;
+        transition: 3s all ease;
+        transform: translate3d(2000px, 0, 0);
+        animation: fadeInRightBig 1.4s linear 1.5s;
+        animation-fill-mode: forwards; }
+  #home main {
     background: #ce93d8; }
-    #home main .scrolly-link header {
+    #home main header {
       background: #9c27b0; }
-      #home main .scrolly-link header h2 {
+      #home main header h2 {
         margin: 0;
         color: #ce93d8;
         font-weight: 200;
         padding: 3rem 0 2.5rem 6rem; }
-    #home main .scrolly-link .content {
+    #home main .content {
       padding: 2rem 6rem; }
-      #home main .scrolly-link .content p {
+      #home main .content p {
         font-weight: 300;
         font-size: 16px;
         color: #FFF; }
 
+#about .content p {
+  font-size: 135%; }
+#about .content :first-child {
+  font-size: 160%; }
+
+#technologies .menu {
+  font-size: 3rem;
+  display: block;
+  background: #9c27b0;
+  padding: 2%; }
+#technologies .collapsible {
+  border: none; }
+#technologies .collapsible-header {
+  background-color: #9c27b0;
+  border-color: #ce93d8; }
+  #technologies .collapsible-header h3 {
+    margin-top: 0;
+    font-weight: 200;
+    color: #ce93d8;
+    padding: 3% 0 0 0; }
+#technologies .collapsible-body {
+  background-color: #9c27b0; }
 #technologies section {
   background: #9c27b0;
   padding: 1.5%;
   transition: box-shadow .25s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   border-radius: 2px; }
-  #technologies section h3, #technologies section p {
-    text-align: center;
-    color: white;
-    font-weight: 300; }
+#technologies .skill-panel {
+  cursor: default; }
+  #technologies .skill-panel .description {
+    opacity: 0;
+    transition: .6s ease;
+    text-align: center; }
+  #technologies .skill-panel:hover .description {
+    opacity: 1;
+    transition: 1s ease; }
 #technologies .card-panel {
   background: #ce93d8;
   color: #FFF; }
+  #technologies .card-panel div {
+    width: 100%; }
+    #technologies .card-panel div i {
+      display: block;
+      text-align: center;
+      font-size: 5rem; }
   #technologies .card-panel .card-title {
-    margin-left: 7.5%;
+    text-align: center;
+    font-weight: 200;
+    width: 100%;
     font-size: 2rem; }
   #technologies .card-panel i {
     font-size: 300%; }

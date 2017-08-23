@@ -8,3 +8,34 @@
   -webkit-transition: $arg;
   transition: $arg;
 }
+
+@mixin opacity($property, $color, $opacity: 0.3) {
+    #{$property}: $color; /* The Fallback */
+    #{$property}: rgba($color, $opacity);
+}
+
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
