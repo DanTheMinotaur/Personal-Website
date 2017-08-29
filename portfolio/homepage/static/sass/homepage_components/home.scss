@@ -1,0 +1,88 @@
+#home {
+  background: $home-light;
+
+  nav {
+    background: $home-dark;
+
+    .active {
+      color: $home-primary;
+      background: rgba(143, 130, 134, 0.11);
+    }
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  // Allows the sidebar to be shown
+  main, #home-header {
+    padding-left: 250px;
+
+    @media only screen and (max-width : 992px) {
+      padding-left: 0;
+    }
+  }
+
+
+  #home-header {
+    background: #333;
+
+    .header-text {
+      position: absolute;
+      width: 100%;
+      @include opacity(background, $home-dark, 0.6);
+      padding: 2.5%;
+      color: #FFF;
+      transform: translate3d(0, -250%, 0);
+      animation: fadeInDown .5s linear 1s;
+      animation-fill-mode: forwards;
+
+      h1 {
+        font-weight: 300;
+        border-bottom: 2px solid #FFF;
+        padding-bottom: 1%;
+        transform: translate3d(-110%, 0, 0);
+        animation: fadeInLeft 1s linear 2s ;
+        animation-fill-mode: forwards;
+      }
+
+      h2 {
+        font-weight: 400;
+        opacity: 1;
+        transition: 3s all ease;
+        transform: translate3d(2000px, 0, 0);
+        animation: fadeInRightBig 1.4s linear 1.5s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  main {
+    background: $home-light;
+
+    header {
+      background: $home-dark;
+
+      h2 {
+        margin: 0;
+        color: $home-light;
+        font-weight: 200;
+        padding: 3rem 0 2.5rem 6rem;
+      }
+    }
+
+    .content {
+      padding: 2rem 6rem;
+
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        color: #FFF;
+      }
+    }
+  }
+}

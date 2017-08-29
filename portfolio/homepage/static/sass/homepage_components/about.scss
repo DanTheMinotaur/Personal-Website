@@ -1,0 +1,11 @@
+#about {
+  .content {
+    p {
+      font-size: 135%
+    }
+
+    :first-child {
+      font-size: 160%;
+    }
+  }
+}

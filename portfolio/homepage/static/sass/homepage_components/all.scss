@@ -1,0 +1,21 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  .header-text {
+    color: #FFFFFF;
+    margin-top: 20%;
+
+    @media #{$medium-and-up} {
+      margin-top: 10%;
+    }
+  }
+}
+
+nav {
+  .brand-logo{
+    text-transform: uppercase;
+  }
+}

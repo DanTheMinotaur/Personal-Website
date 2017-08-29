@@ -6827,11 +6827,11 @@ nav .brand-logo {
     opacity: 1;
     transform: none; } }
 #home {
-  background: #4db6ac; }
+  background: #ce93d8; }
   #home nav {
-    background: #004d40; }
+    background: #9c27b0; }
     #home nav .active {
-      color: #4db6ac;
+      color: #ab47bc;
       background: rgba(143, 130, 134, 0.11); }
   #home .container {
     width: 85%; }
@@ -6847,9 +6847,9 @@ nav .brand-logo {
     #home #home-header .header-text {
       position: absolute;
       width: 100%;
-      background: #004d40;
+      background: #9c27b0;
       /* The Fallback */
-      background: rgba(0, 77, 64, 0.6);
+      background: rgba(156, 39, 176, 0.6);
       padding: 2.5%;
       color: #FFF;
       transform: translate3d(0, -250%, 0);
@@ -6870,12 +6870,12 @@ nav .brand-logo {
         animation: fadeInRightBig 1.4s linear 1.5s;
         animation-fill-mode: forwards; }
   #home main {
-    background: #4db6ac; }
+    background: #ce93d8; }
     #home main header {
-      background: #004d40; }
+      background: #9c27b0; }
       #home main header h2 {
         margin: 0;
-        color: #4db6ac;
+        color: #ce93d8;
         font-weight: 200;
         padding: 3rem 0 2.5rem 6rem; }
     #home main .content {
@@ -6893,22 +6893,22 @@ nav .brand-logo {
 #technologies .menu {
   font-size: 3rem;
   display: block;
-  background: #004d40;
+  background: #9c27b0;
   padding: 2%; }
 #technologies .collapsible {
   border: none; }
 #technologies .collapsible-header {
-  background-color: #004d40;
-  border-color: #4db6ac; }
+  background-color: #9c27b0;
+  border-color: #ce93d8; }
   #technologies .collapsible-header h3 {
     margin-top: 0;
     font-weight: 200;
-    color: #4db6ac;
+    color: #ce93d8;
     padding: 3% 0 0 0; }
 #technologies .collapsible-body {
-  background-color: #004d40; }
+  background-color: #9c27b0; }
 #technologies section {
-  background: #004d40;
+  background: #9c27b0;
   padding: 1.5%;
   transition: box-shadow .25s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -6923,7 +6923,7 @@ nav .brand-logo {
     opacity: 1;
     transition: 1s ease; }
 #technologies .card-panel {
-  background: #4db6ac;
+  background: #ce93d8;
   color: #FFF; }
   #technologies .card-panel div {
     width: 100%; }
@@ -6941,9 +6941,6 @@ nav .brand-logo {
 
 #portfolio-links .row .col {
   padding: 0; }
-#portfolio-links .row {
-  line-height: 0;
-  margin-bottom: 0; }
 #portfolio-links img {
   height: 360px;
   width: 100%; }
@@ -7020,4 +7017,4 @@ nav .brand-logo {
     #blog-heading .header-text {
       text-align: center; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=materialize.css.map */

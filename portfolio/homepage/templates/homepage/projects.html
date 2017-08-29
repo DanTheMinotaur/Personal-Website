@@ -3,23 +3,19 @@
         <h2>Projects</h2>
     </header>
 {% if all_links %}
-    <div class="content">
-        <p>Here are just a few things that I've made</p>
-    </div>
     {% for link in all_links %}
     {% if forloop.first %}<div class="row">{% endif %}
-        <div class="col s12 m6 l6">
-            <section class="show-box {{ link.optional_class }}">
-                    <div class="image-overlay">
-                        <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
-                        <div class="link-text">
-                            <h3>{{ link.link_name }}</h3>
-                            <h4>{{ link.link_description }}</h4>
-                        </div>
+        <a href="{{ link.link_url }}" target="_blank">
+            <div class="col s12 m12 {% if forloop.counter0|divisibleby:2 %}l7{% else %}l5{% endif %}">
+                <section class="show-box {{ link.optional_class }}">
+                    <img src="{{ MEDIA_URL }}{{ link.link_image }}" alt="{{ link.link_description }}">
+                     <div class="link-text{% if forloop.counter|divisibleby:2 %} project-right{% else %} project-left{% endif %}">
+                        <h3>{{ link.link_name }}</h3>
+                        <h4>{{ link.link_description }}</h4>
                     </div>
-
-            </section>
-        </div>
+                </section>
+            </div>
+        </a>
     {% if forloop.counter|divisibleby:2 %}</div><div class="row">{% endif %}
     {% endfor %}
 {% else %}

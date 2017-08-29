@@ -1,0 +1,64 @@
+#portfolio-links {
+  .row .col {
+    padding: 0;
+  }
+
+  .row {
+    line-height: 0;
+    margin-bottom: 0;
+  }
+  img {
+    height: 360px;
+    width: 100%;
+  }
+
+  .show-box {
+    position: relative;
+
+    .project-left, .project-right {
+      opacity: 0;
+      transition: all 1s ease 1.2s;
+    }
+
+    .project-left {
+      transform: translate3d(-100%, 0, 0);
+
+    }
+
+    .project-right {
+      transform: translate3d(100%, 0 , 0);
+    }
+
+    &:hover {
+      .project-left, .project-right {
+        transform: translate3d(0, 0, 0);
+        transition: all .5s ease;
+        opacity: 1;
+      }
+    }
+
+
+    .link-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 25%;
+      color: rgba(255,255,255,1);
+      //border: 1px solid blue;
+      background-color: rgba(0,0,0,.7);
+
+
+      h3 {
+        font-weight: 300;
+      }
+
+      h4 {
+        font-size: 1.7rem;
+      }
+    }
+
+
+
+
+  }
+}
